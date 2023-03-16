@@ -1,4 +1,4 @@
-public class EmpregadoPeriodoIntegral  extends Empregados{
+public class EmpregadoPeriodoIntegral  extends Empregado {
     private double salarioSemanal;
     private double deducaoBeneficios;
 

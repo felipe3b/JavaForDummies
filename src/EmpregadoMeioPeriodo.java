@@ -1,4 +1,4 @@
-public class EmpregadoMeioPeriodo extends Empregados{
+public class EmpregadoMeioPeriodo extends Empregado {
     private double taxaHora;
 
     public void setTaxaHora(double taxaIn){

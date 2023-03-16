@@ -51,12 +51,36 @@ public class Main {
         String valorPagtoMp = String.valueOf(mpEmpregado.calcValorPagamento(10));
         mpEmpregado.preencherCheque(valorPagtoMp);
 
+        System.out.println("--->Empregado Meio Periodo Dobro");
+        MeioPeriodoHorasEmDobro mpDobro = new MeioPeriodoHorasEmDobro();
+        mpDobro.setNome("Damaris Baumgart");
+        mpDobro.setCargo("Administrador");
+        mpDobro.setTaxaHora(15);
+        String pgtoDobro = String.valueOf(mpDobro.calcValorPagamento(50));
+        mpDobro.preencherCheque(pgtoDobro);
+
+        System.out.println("--------Usando a Classe Temperatura--------");
+        final String format = "%5.2f graus %s\n";
+        Temperatura temp = new Temperatura();
+        temp.setNumero(70.0);
+        temp.setEscala(EscalaTemp.FAHRENHEIT);
+        System.out.printf(format, temp.getNumero(), temp.getEscala());
+
+        temp = new Temperatura(2.01);
+        System.out.printf(format, temp.getNumero(), temp.getEscala());
+
+        temp = new Temperatura(EscalaTemp.CELSIUS);
+        System.out.printf(format, temp.getNumero(), temp.getEscala());
+
+        temp = new Temperatura(2.73, EscalaTemp.KELVIN);
+        System.out.printf(format, temp.getNumero(), temp.getEscala());
+
 
 
     }
 
     private static void pagarUmEmpregado(Scanner diskScanner) {
-        Empregados umEmpregado = new Empregados();
+        Empregado umEmpregado = new Empregado();
         umEmpregado.setNome(diskScanner.nextLine());
         umEmpregado.setCargo(diskScanner.nextLine());
         umEmpregado.preencherCheque(diskScanner.nextLine());
