@@ -75,6 +75,20 @@ public class Main {
         temp = new Temperatura(2.73, EscalaTemp.KELVIN);
         System.out.printf(format, temp.getNumero(), temp.getEscala());
 
+        System.out.println("--------Usando a Classe TemperaturaAgradavel--------");
+        TemperaturaAgradavel tempAgradavel = new TemperaturaAgradavel();
+        tempAgradavel.setNumero(40.0);
+        tempAgradavel.setEscala(EscalaTemp.CELSIUS);
+        tempAgradavel.display();
+
+        tempAgradavel =  new TemperaturaAgradavel(32.0);
+        tempAgradavel.display();
+
+        tempAgradavel = new TemperaturaAgradavel(EscalaTemp.KELVIN);
+        tempAgradavel.display();
+
+        tempAgradavel =  new TemperaturaAgradavel(2.73, EscalaTemp.KELVIN);
+        tempAgradavel.display();
 
 
     }
